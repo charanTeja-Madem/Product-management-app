@@ -52,6 +52,21 @@ function Product() {
             <span className="text-gray-400 text-sm">({product.rating?.count} reviews)</span>
           </div>
           <p className="text-gray-600 leading-relaxed mt-2">{product.description}</p>
+          
+          <div className="flex gap-4 mt-8 pt-6 border-t border-gray-200">
+            <button
+              onClick={() => alert(`Added "${product.title}" to cart!`)}
+              className="flex-1 bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
+            >
+              Add to Cart
+            </button>
+            <button
+              onClick={() => alert(`Proceeding to checkout for "${product.title}"`)}
+              className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
